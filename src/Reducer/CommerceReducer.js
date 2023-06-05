@@ -30,6 +30,9 @@ export const ACTIONS = {
     INCREMENT:"increment",
     DECREMENT:"decrement",
     BESTCATEGORY:"bestCategory",
+    RATINGFOUR: "ratingfour",
+    RATINGTHREETOFOUR:"ratingthreetofour",
+    RATINGLESSTHREE:"ratinglessthree"
 }
 
 export function commerceReducer(state, action){
@@ -96,7 +99,35 @@ export function commerceReducer(state, action){
                 return{...state,ProductsData:[...state.oldData], personalizedDesigns:!state.personalizedDesigns}
             }
         }
-        case ACTIONS.SEARCH:{
+        case ACTIONS.RATINGFOUR:{
+            if(!state.ratingfour){
+                const filteredData = state.ProductsData.filter((product) => Number(product.star > 4))
+                return {...state, ratingfour:!state.ratingfour, ProductsData:[...filteredData]}
+            }
+            else{
+                return{...state,ProductsData:[...state.oldData],ratingfour:!state.ratingfour }
+            }
+        }
+        case ACTIONS.RATINGTHREETOFOUR:{
+            if(!state.ratingthreetofour){
+                const filteredData = state.ProductsData.filter((product) => Number(product.star <= 4) && Number(product.star > 3))
+                return {...state, ProductsData:[...filteredData],ratingthreetofour:!state.ratingthreetofour}
+            }
+            else{
+                return{...state,ProductsData:[...state.oldData],ratingthreetofour:!state.ratingthreetofour }
+            }
+            
+        }
+        case ACTIONS.RATINGLESSTHREE:{
+            if(!state.ratinglessthree){
+                const filteredData = state.ProductsData.filter((product) =>  Number(product.star < 3))
+                return {...state, ProductsData:[...filteredData]}
+            }
+            else{
+                return{...state,ProductsData:[...state.oldData],ratinglessthree:!state.ratinglessthree }
+            }
+        }
+        case ACTIONS.SEARCH:{ 
             const filteredData = state.ProductsData.filter((product) => product.name.toLowerCase().includes(action.payLoad.toLowerCase()))         
             return{...state, ProductsData:[...filteredData]}
         }

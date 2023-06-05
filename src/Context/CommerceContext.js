@@ -92,6 +92,9 @@ export function CommerceProvider({children}){
         count:1,
         wishList:[],
         wishlistref: false,
+        ratingfour:false,
+        ratingthreetofour:false,
+        ratinglessthree:false
     }
     const [state, dispatch] = useReducer(commerceReducer, initialState)
     return(

@@ -129,7 +129,24 @@ export function ProductPage(){
         })
     }
 
-   
+    const ratingfour  = (e) => {
+        dispatch({
+            type:ACTIONS.RATINGFOUR,
+            payLoad: e.target.value
+        })
+    }
+    const ratingThreToFour = (e) => {
+        dispatch({
+            type: ACTIONS.RATINGTHREETOFOUR,
+            payLoad: e.target.value
+        })
+    }
+    const ratinglessthree = (e) => {
+        dispatch({
+            type:ACTIONS.RATINGLESSTHREE,
+            payLoad:e.target.value
+        })
+    }
     return(
         <div className="productPage">
         <ProductNavBar/>
@@ -205,6 +222,24 @@ export function ProductPage(){
                         </label>
                     </li>
                 </ul>
+                <h3>Ratings</h3>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="checkbox" onChange={ratingfour} />4⭐ and above⭐
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" onChange={ratingThreToFour} />3.5⭐ to 4⭐
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" onChange={ratinglessthree} />Less than 3⭐
+                        </label>
+                    </li>
+                </ul>
             </form>
             <div className="ProductListing">
                 <h1>Product Cart</h1>
@@ -233,6 +268,7 @@ export function ProductPage(){
                                         <div className="stocks">
                                              <p style={{color: `${product?.inStock ? "#32cd32": "red"}`}}>{product?.inStock ? "InStock" : "Out Of Stock"}</p>
                                              <p  style={{color: `${product?.deliveryTime ? "red": ""}`, marginTop:"-10px"}}>{product?.deliveryTime ? "Fast Delivery" : ""}</p>
+                                             <span style={{fontStyle:"italic", marginTop:"-66px", marginLeft:"57px",}}>{product?.star}⭐</span>
                                         </div>
                                     </div>
                                    
