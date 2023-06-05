@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+.HomePage{
+    background: #606060;
+    background: radial-gradient(at right bottom, #606060, #010101);
+    background-repeat: repeat;
+    width: 100%;
+  }
+  
+  
+  .nav{
+    display: grid;
+    gap: 20px;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    background: #010101,;
+    background: linear-gradient( #010101,  #606060,);
+    margin: -5px -20px 10px;
+    height: 100%;
+    opacity: 0.7; 
+  }
+  
+  
+  .nav img{
+    width: 50px;
+    height: 55px;
+    padding: 10px;
+  }
+  
+  
+  .logoName{
+    font-family: 'Pacifico', cursive;
+    color: rgb(246, 108, 3);
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 22px;
+    font-weight: bolder;
+    font-size: x-large;
+    cursor: none;
+    
+  }
+  
+  .searchBar{
+    margin: 15px;
+    width: 37%;
+    font-size:  medium;
+    font-weight: bold;
+    padding: 10px;
+    margin-left: 20%;
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  .search-btn{
+    padding: 10px;
+    border-radius: 20px;
+    font-size:  medium;
+    font-weight: bold;
+    width: 8%;
+  }
+  
+  .links {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    padding: 10px;
+    font-size: large;
+    font-style: italic;
+    font-weight: 500;
+  }
+  
+  .main{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    
+  }
+  .wrapper{
+    width: fit-content;
+  }
+  
+  .Homeimage img{
+    position: absolute;
+    top: 100px;
+    right: 55px;
+    width: 80%;
+    height: 60%;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2) ;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .Homeimage img:hover{
+    transform: scale(1.01);
+  }
+  
+  .prev{
+    position: relative;
+    font-size: 50px;
+    top: 120px;
+    left: -455px;
+    width: 30px;
+    cursor: pointer;
+    color: rgb(246, 108, 3);
+  }
+  
+  .next{
+    position: relative;
+    font-size: 50px;
+    top: 58px;
+    left: 585px;
+    width: 30px;
+    cursor: pointer;
+    color: rgb(246, 108, 3);
+  }
+  
+  
+  .categorized ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+    top: 300px;
+    left: 80px;
+    list-style-type: none;
+    padding: 30px;
+  }
+  
+  .categorized h1{
+    position: absolute;
+    top: 480px;
+    right: 420px;
+    bottom: 20px;
+    text-decoration: underline;
+    color: whitesmoke;
+  }
+  
+  .categoryCard{
+    max-width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    margin: 10px 50px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    cursor: pointer;
+    background: #5a5a5a
+  }
+  
+  .categoryCard:hover{
+    transform: translateY(-20px);
+  }
+  
+  
+  .categoryCard  img{
+    width: 100%;
+    height: 60%;
+  }
+  
+  .categoryCard h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+  }
+  
+  .categoryLink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+  }
+  
+  .footer{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: -500px;
+    margin: -50px;
+    left: 340px;
+    line-height: 0.1px;
+    color: rgb(246, 108, 3);
+  }
+  
+  .footer h2{
+    font-family: 'Pacifico', cursive;
+  }
+  
+  .socialLinks{
+    display:flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: -513px;
+    margin: -50px;
+    right: 80px;
+    padding: 15px;
+  }
+  
+  .socialLinks img{
+    width: 40px;
+    padding: 5px;
+  }
+  .homehumBurger{
+    visibility: collapse;
+    width: 0;
+    height: 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    .prev{
+      left: -520px;
+    }
+    
+    .next{
+      left: 685px;
+     
+    }
+    
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1020px){
+    .searchBar{
+      width: 33%;
+    }
+    .search-btn{
+      width: 10%;
+    }
+    .links {
+      right: -25px;
+      padding: 7px;
+      gap: 10px;
+    }
+    .Homeimage img{
+      right: 35px;
+      width: 75%;
+    }
+    .prev{
+      font-size: 30px;
+      left: -245px;
+      width: 10px;
+    }
+    
+    .next{
+      font-size: 30px;
+      top: 78px;
+      left: 365px;
+      width: 10px;
+    }
+    .nav{
+      padding: 1px;
+      margin: -20px -30px 7px;
+      height: 100%;
+      opacity: 0.7; 
+    }
+    .nav img{
+      width: 50px;
+      height: 55px;
+      padding: 10px;
+    }
+    .categorized h1{
+      position: absolute;
+      top: 420px;
+      right: 220px;
+    }
+    .categoryCard{
+      margin-top: -10px;
+    }
+    .footer{
+      left: 180px;
+    }
+    
+  }
+
+  @media screen and (min-width: 325px) and (max-width: 760px){
+    .header{
+      visibility: collapse;
+    }
+    .homehumBurger{
+      visibility: visible;
+    }
+  .homelogoNameNavv{
+      visibility: visible;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      font-family: 'Pacifico', cursive;
+      color: rgb(246, 108, 3);
+      margin-top: 10px;
+      margin-left: 20px;
+      padding: 18px;
+      font-weight: bold;
+      font-size: medium;
+    }
+    .homesearchhumBurger{
+      position: relative;
+      top: -60px;
+      left: 120px;
+     }
+     .homesearchBarin{
+       border: 1px solid black;
+       width: 200px;
+       padding: 4px;
+       border-radius: 20px;
+     }
+     .homehumBurgersize svg{
+      width: 24px;
+      position: relative;
+      top: -53px;
+      right: -380px;
+    }
+    .homenavIconsin{
+      margin-top: -70px;
+      margin-left: 363px;
+    }
+    .homenavIconsin svg{
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+    }
+    .Homeimage img{
+      margin-top: 15px;
+      right: 85px;
+      width: 68%;
+      height: 40%;
+    }
+    .prev{
+      font-size: 30px;
+      left: -175px;
+    }
+    
+    .next{
+      font-size: 30px;
+      top: 88px;
+      left: 140px;
+    }
+    .categorized ul{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: 240px;
+      left: 20px;
+    }
+    
+    .categorized h1{
+      position: absolute;
+      top: 350px;
+      right: 80px;
+      bottom: 2px;
+    }
+    .footer{
+      top: 1500px;
+      left: 60px;
+    }
+    
+    .socialLinks{
+      top: 1570px;
+      right: 40px;
+    }
+    
+    .socialLinks img{
+      width: 30px;
+      padding: 3px;
+    }
+    .homenavIconsin span{
+      background-color:rgb(246, 108, 3) ;
+      color: white;
+      padding: 2px;
+      border-radius: 200%;
+      font-size: small;
+      position: relative;
+      top: -50px;
+      left: 35px;
+    }
+  }

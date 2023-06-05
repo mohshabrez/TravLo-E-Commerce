@@ -1,0 +1,340 @@
+.cartContainer{
+    margin: 130px;
+    
+  }
+  
+  .cartContainer h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+  }
+  
+  .cartBox{
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .cartDiv {
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 400px;
+    height: 270px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    list-style-type: none; 
+    margin: 30px;
+  }
+  
+  .cartDiv img{
+    width: 140px;
+    height: 140px;
+    padding: 13px;
+    margin: 2px;
+  }
+  
+  .cartDetails{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: relative;
+    left: 10rem;
+    bottom: 11.5rem;
+    padding: 1px;
+    margin-left: 25px;
+  }
+  
+  .Cartline{
+    border: 1px solid rgb(179, 175, 175);
+    width: 90%;
+    position: relative;
+    top:-9rem;
+    left: 1.2rem;  
+  }
+  .cardBtns{
+    display: flex;
+    flex-direction: row;
+    width: 17rem;
+    position: relative;
+    top: -8rem;
+    left: 4.2rem;
+    gap:10px;
+   }
+   
+   .cardBtns button{
+     padding: 5px;
+     display: flex;
+     justify-content: center;
+     text-align: center;
+     font-size: medium;
+   }
+   
+   .checkoutBox{
+     display: flex;
+     flex-direction: column;
+     box-shadow: rgba(90, 90, 90, 0.5) 0px 5px 15px;
+     height: fit-content;
+     margin-left: 4rem;
+     margin-top: 2.7rem;
+     margin-bottom: 4rem;
+     position: sticky;
+     top: 20%;
+     align-items: center;
+     justify-content: center;
+     width: 20rem;
+   }
+   
+   .checkLine{
+     border: 1px solid rgb(137, 137, 137);
+     width: 90%;
+   }
+   
+   .checkoutDetails ul{
+     list-style-type: none;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 80%;
+     margin-left: -4rem;
+   }
+   
+   .checkOut{
+     width: 12rem;
+     padding: 6px;
+     margin-left: 10px;
+     margin-bottom: 10px;
+     background-color:rgb(246, 108, 3);
+     color: white;
+     border-radius: 10px;
+   }  
+
+   .checkBox{
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    justify-content: center;
+    padding: 10px;
+    margin: 40px;
+  }
+  
+  .addressForm{
+    display: flex;
+    justify-content: center;
+    margin: 60px;
+    width: 50%;
+    border-radius: 20px;
+    box-shadow:0 0 10px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .addressForm input{
+    width: 230%;
+    margin-left: -80px;
+    padding: 4px;
+  }
+
+  .addressForm input:hover{
+    border-color:  rgb(200, 157, 17);
+
+  }
+  
+  .addressForm h3{
+    display: flex;
+    margin-left: -30px;
+  }
+  
+  .addressForm li{
+    margin: 30px;
+    line-break: none;
+    line-height: 0.1;
+    list-style-type: none;
+  }
+  
+  .addressForm ul button{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 4px;
+  }
+  
+  .addressbtns{
+    display: flex;
+    flex-direction: row;
+    margin-left: -50px;
+  }
+  .addressBox h4{
+    margin-left: 50px;
+    text-decoration: underline;
+  }
+  
+  .addressBtn{
+    margin: 20px;
+    margin-left: 140px;
+    padding: 10px;
+    background-color: rgb(246, 108, 3);
+    color: white;
+    border-radius: 20px;
+  }
+
+  .addItem{
+    background-color: rgb(246, 108, 3);
+    color: white;
+    border-radius: 20px;
+    width: 80px;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .finalAddress{
+    padding: 20px;
+    line-height: 25px;
+    text-align: left;
+  }
+  
+  .priceCard{
+    border: 1px solid black;
+    margin: 30px;
+    text-align: center;
+  }
+  
+  .itemsList{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-right: 40px;
+  }
+  
+  .itemsList ul {
+    list-style-type: none;
+  }
+  
+  
+  .placeOrder{
+    padding: 10px;
+    width: 150px;
+    background-color: rgb(246, 108, 3);
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .checkOutheading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: underline;
+    margin-top: 120px;
+  }
+
+  .radioBtns{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .radioBtn{
+    display: flex;
+    background-color: white;
+    color: rgb(246, 108, 3);
+    padding: 6px;
+    margin-left: 20px;
+    border-radius: 10px;
+  }
+
+  .emptyCart{
+    width:40rem;
+    cursor:none
+  }
+
+  .emptyCartTitle{
+    width: 150%;
+    font-size: 500%;
+  }
+
+
+  @media screen and (max-width: 1024px) {
+    .cartDiv{
+      margin: 10px;
+    }
+
+    .emptyCart{
+      width: 30rem;
+      cursor:none
+    }
+
+    .emptyCartTitle{
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      font-size: 300%;
+      margin: 40px;
+    }
+
+  }
+
+  @media screen and (max-width: 768px){
+    .emptyCart{
+      width: 20rem;
+      cursor:none;
+      margin: 60px;
+    }
+    .emptyCartTitle{
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      font-size: 250%;
+      margin: 40px;
+    }
+    .cartContainer{
+      margin: 5px;
+    }
+
+    .checkBox{
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      margin: 30px;
+    }
+    .addressBtn{
+      margin-left: 50px;
+    }
+  }
+
+  @media screen and (min-width: 325px) and (max-width: 760px){
+    .cartContainer h1{
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      justify-content: center;
+      margin-top: 140px;
+      margin-left: 20px;
+    }
+    .cartBox{
+      margin: 10px;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .cartDiv {
+      width: 300px;
+      margin-left: -10px;
+    }
+
+    .cardBtns{
+      width: 14rem;
+      left: 2rem;
+    }
+    .checkoutBox{
+      margin-left: 1.5rem;
+    }
+    .checkBox{
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      margin: 30px;
+    }
+    .priceCard{
+      width: 350px;
+    }
+    .addressForm{
+      width: 300px;
+    }
+    .emptyCartTitle{
+    visibility: hidden;
+    }
+  }

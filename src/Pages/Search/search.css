@@ -1,0 +1,348 @@
+
+
+.navBar{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin-right: 20px;
+  }
+  
+  .navIcons{
+    margin-top: 10px;
+    margin-left: 150px;
+  }
+  
+  .navIcons svg{
+    padding: 10px;
+  }
+  
+  .logoNameNav{
+    position: absolute;
+    top: -16px;
+    left: -10px;
+    font-family: 'Pacifico', cursive;
+    color: rgb(246, 108, 3);
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 22px;
+    font-weight: bolder;
+    font-size: x-large;
+  
+  }
+  
+  .navBar img{
+    width: 30px;
+    padding: 8px;
+    position: relative;
+    top: 10px;
+    right: 120px;
+  }
+  
+  
+  .searchFiltersSection{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    padding: 20px;
+  }
+  
+  .formData{
+    padding: 10px;
+    margin: 10px;  
+  }
+  
+  .formData h3{
+    padding: 2px;
+    margin-left: 15px;
+    text-shadow: 2px #8f8e8e;
+  }
+  
+  .formData button{
+    display: flex;
+    flex-direction: row;
+    margin-left: 180px;
+    margin-top: -40px;
+  }
+  
+  .formData li{
+    list-style-type: none;
+  }
+  
+  .ProductListing h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bolder;
+    font-size:xx-large;
+  }
+  
+  .searchULProducts{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+    margin-left: 5px;
+    list-style-type: none;
+    justify-content: space-between;
+    
+  }
+  
+  .searchULProducts img{
+    width: 200px;
+    height: 190px;
+  }
+  
+  .searchproductCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    width: 225px;
+    height: 390px;
+    padding: 5px;
+    margin-right: 80px;
+    margin-top: 10px;
+    border-radius: 10px;
+    line-height: 10px;
+    justify-content: space-between;
+  }
+  
+  .searchproductCard:hover{
+    transform: translate(0, -12px);
+  }
+  
+  .productDetails{
+    padding: 10px;
+    margin: 25px;
+  }
+  
+  .productDetails button{
+    padding: 8px;
+    margin-top: 38px;
+    cursor: pointer;
+  
+  }
+  .AtoCart, .Atowish{
+    width: fit-content;
+    background-color:rgb(246, 108, 3);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+  }
+  
+  .material-symbols-outlined{
+    display: flex;
+    margin-top: -50px ;
+    margin-left: 180px;
+    cursor: pointer;
+  }
+  
+  
+  
+  .stocks{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    position: relative;
+    bottom: 55px;
+    right: -10px;
+    line-height: 14px;
+  }
+  
+  .searchElements{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+  
+  .searchElements .ProductListing{
+    margin-left: 100px;
+    
+  }
+  
+  .bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: -20%;
+  }
+  
+  .searchpagebar{
+    margin: 35px;
+    width: 45%;
+    font-size:  medium;
+    font-weight: bold;
+    padding: 10px;
+    margin-left: 15%;
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  .searchpagebtn{
+    padding: 10px;
+    border-radius: 20px;
+    font-size:  medium;
+    font-weight: bold;
+    width: 7%;
+  }
+  
+  .humBurger {
+    visibility:collapse;
+  }
+  .searchHeading{
+    margin-left: 100px;
+    margin-bottom: 10px;
+  }
+  .navIcons span{
+    background-color:rgb(246, 108, 3) ;
+      color: white;
+      padding: 2px;
+      border-radius: 200%;
+      font-size: small;
+      position: relative;
+      top: -28px;
+      left: -20px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1020px){
+  
+    .bar{
+      margin-right: 100px;
+    }
+  
+    .searchpagebar{
+      width: 270px;
+    }
+  
+    .navBar{
+      margin-right: -25px;
+    }
+  
+    .navIcons{
+      margin-top: -10px;
+    }
+  
+    .navIcons svg{
+      padding: 6.3px;
+    }
+  
+    .navIcons img{
+      width: 30px;
+      padding: 5px;
+      gap: 5px
+    }
+  
+    .searchpagebtn{
+      width: 80px;
+      text-align: center;
+    }
+    
+    .searchHeading{
+      margin-left: 70px;
+    }
+    .searchULProducts{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-left: -70px;
+    }
+  }
+  
+  @media screen and (min-width: 325px) and (max-width: 760px){
+    .logoNameNavvsearch{
+      position: absolute;
+      top: -90px;
+      left: -200px;
+      font-family: 'Pacifico', cursive;
+      color: rgb(246, 108, 3);
+      margin-top: 20px;
+      margin-left: 20px;
+      padding: 18px;
+      font-weight: bold;
+      font-size: small;
+    }
+    .searchElements{
+      margin-top: -200px;
+    }
+  
+    .productslib{
+      visibility: hidden;
+    }
+  
+    .navBar{
+      margin-top: -5px;
+      margin-left: -40px;
+    }
+  
+    .navIconsin{
+      margin-top: -5px;
+      margin-right: -10px;
+    }
+  
+    .navIconsin svg{
+      display: flex;
+      flex-direction: row;
+      padding: 7px;
+    }
+  
+  
+    .bar{
+      margin-left: 310px;
+      margin-top: 10px;
+    }
+   
+    .search-btn{
+      visibility: collapse;
+    }
+    .searchpagebtn{
+      width: 45px;
+      position: relative;
+      top: -29px;
+      right: 300px;
+      text-align: center;
+      justify-content: center;
+      font-size: xx-small;
+      padding: 6px;
+    }
+  
+    .searchpagebar{
+      position: relative;
+      top: -29px;
+      right: 290px;
+      padding: 1px;
+      width: 200px;
+      border-radius: 20px;
+    }
+  
+    .searchHeading{
+      font-size: larger;
+      margin-top: 5px;
+      margin-left: 40px;
+    }
+    
+    .humBurger{
+      visibility: visible;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      margin-top: 60px;
+      position: relative;
+      left: 180px;
+    }
+    .searchULProducts{
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-left: -70px;
+    }
+    .navIconsin span{
+      background-color:rgb(246, 108, 3) ;
+          color: white;
+          padding: 2px;
+          border-radius: 200%;
+          font-size: small;
+          position: relative;
+          top: -50px;
+          left: 35px;
+    }
+  }

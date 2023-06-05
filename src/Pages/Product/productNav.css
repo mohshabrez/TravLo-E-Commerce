@@ -1,0 +1,153 @@
+.ProductNavBar{
+    background: #010101,;
+    background: linear-gradient( #010101,  #606060,);
+    font-size: 1.5rem;
+    left: 0;
+    padding: 0.5rem clamp(2rem,8vw,8rem);
+    position: fixed;
+    top: 0;
+    width: 300vw;
+    z-index: 1; 
+}
+.prodnavBar{
+    display: flex;
+    flex-direction: column;
+}
+.prodnavIcons{
+    margin-top: 25px;
+    margin-left: 23%;
+}
+.prodnavIcons svg{
+    padding: 10px;
+}
+.prodlogoNameNav{
+    position: absolute;
+    top: -6px;
+    left: -10px;
+    font-family: 'Pacifico', cursive;
+    color: rgb(246, 108, 3);
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 22px;
+    font-weight: bolder;
+    font-size: x-large;
+  
+  }
+
+  .prodsearchSection{
+    margin-top: -50px;
+    margin-left: 7%;
+  }
+  
+  .prodsearchBar{
+    margin-top: 2px;
+    width: 10%;
+    font-size:  medium;
+    font-weight: bold;
+    padding: 7px;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 20px;
+  }
+  
+  .prodsearch-btn{
+    padding: 7px;
+    border-radius: 20px;
+    font-size:  medium;
+    font-weight: bold;
+    width: 3%;
+  } 
+  .prodhumBurger{
+    visibility: collapse;
+    width: 0;
+    height: 0;
+  }
+  .prodnavIcons span{
+    background-color:rgb(246, 108, 3) ;
+    color: white;
+    padding: 2px;
+    border-radius: 200%;
+    font-size: small;
+    position: relative;
+    top: -28px;
+    left: -20px;
+  }
+
+
+
+  @media screen and (min-width: 768px) and (max-width: 1020px) {
+    .prodnavIcons{
+        margin-left: 27%;
+    }
+    .prodnavIcons svg{
+        padding: 7px;
+    }
+    .prodsearchSection{
+        margin-left: 10%;
+    }
+    .prodsearch-btn{
+        width: 4%;
+    } 
+  }
+
+  @media screen and (min-width: 325px) and (max-width: 760px){
+    .productslib{
+        visibility: collapse;
+        width: 0;
+        height: 0;
+      }
+    .prodhumBurger{
+        visibility: visible;
+    }
+    
+    .logoNameNavv{
+        visibility: visible;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        font-family: 'Pacifico', cursive;
+        color: rgb(246, 108, 3);
+        margin-top: 10px;
+        margin-left: 20px;
+        padding: 18px;
+        font-weight: bold;
+        font-size: small;
+      }
+
+      .searchhumBurger{
+       position: relative;
+       top: 30px;
+       left: 120px;
+      }
+      .searchBarin{
+        border: 1px solid black;
+        width: 160px;
+        padding: 4px;
+        border-radius: 20px;
+      }
+      .humBurgersize svg{
+        width: 24px;
+        position: relative;
+        top: 20px;
+        right: -360px;
+      }
+      .prodnavIconsin{
+        position: relative;
+        margin-left: 344px;
+      }
+      .prodnavIconsin svg{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+      }
+      .prodnavIconsin span{
+        background-color:rgb(246, 108, 3) ;
+        color: white;
+        padding: 2px;
+        border-radius: 200%;
+        font-size: small;
+        position: relative;
+        top: -50px;
+        left: 35px;
+      }
+  }

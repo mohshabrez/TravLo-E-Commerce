@@ -1,0 +1,7 @@
+.loader img{
+    display: flex;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 45%;
+}
