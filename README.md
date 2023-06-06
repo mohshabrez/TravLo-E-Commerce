@@ -83,4 +83,4 @@ $ npm start
 
 ## Loom Video of The Website -
 
-[![TravLo.co](<img width="898" alt="Screenshot 2023-06-06 062923" src="https://github.com/mohshabrez/TravLo-E-Commerce/assets/31725739/c6adb952-e82d-43b6-a8aa-5b63716c8804">)](https://www.loom.com/share/276b45e3098240b29a7554a20fbb79bc)
+[![TravLo.co]<img width="898" alt="Screenshot 2023-06-06 062923" src="https://github.com/mohshabrez/TravLo-E-Commerce/assets/31725739/c6adb952-e82d-43b6-a8aa-5b63716c8804">](https://www.loom.com/share/276b45e3098240b29a7554a20fbb79bc)
