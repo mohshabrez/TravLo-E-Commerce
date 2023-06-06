@@ -54,9 +54,8 @@ export function AuthProvider({children}){
 
         try {
             const encodedToken = localStorage.getItem("token")
-            const body = {
-                validateData
-            }
+            const body = JSON.stringify(validateData)
+            console.log(body)
             const res = await axios.post("/api/auth/login", body);
             localStorage.setItem("token", await res.data.encodedToken);
             setAuth(localStorage.getItem("token") ? true : false);
