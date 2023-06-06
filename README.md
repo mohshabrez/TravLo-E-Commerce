@@ -1,5 +1,7 @@
 
-![Logo](https://github.com/mohshabrez/TravLo-E-Commerce/blob/main/src/Images/LOGO.png)
+
+<img width="104" alt="image" src="https://github.com/mohshabrez/TravLo-E-Commerce/assets/31725739/4c717968-7c62-4142-94a8-c93424ab4072">
+
 
 # TravLo
 
