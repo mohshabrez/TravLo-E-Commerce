@@ -1,5 +1,5 @@
 
-![Logo]()
+![Logo](https://github.com/mohshabrez/TravLo-E-Commerce/blob/main/src/Images/LOGO.png)
 
 # TravLo
 
