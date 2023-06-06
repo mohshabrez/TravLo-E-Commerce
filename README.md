@@ -1,14 +1,21 @@
-TravLo
-An e-commerce web app that gets all the stuff available to trekkers and travellers at one stop.
+#TravLo
+***An e-commerce web app that gets all the stuff available to trekkers and travellers at one stop.***
 
-Libraries and Languages used:
-CSS
-ReactJS
-React router
-Axios
-Mockbee
-Features and Pages:
-Landing Page
+[How to install and run locally ?](TravLO-E-Commerce/README.md)
+
+$ git clone [https://github.com/mohshabrez/TravLo-E-Commerce]
+$ cd TravLo-E-Commerce
+$ npm install
+$ npm start
+
+###Libraries and Languages used:
+-CSS
+-ReactJS
+-React router
+-Axios
+-Mockbee
+-Features and Pages:
+-Landing Page
 
 
 This Page consists of:
@@ -47,5 +54,9 @@ Add to cart
 Search
 You can search any product you want based on
 
-
+Built with -
+React JS
+React Context API + useReducer
+React Router v6
+Pure CSS and icons from iconScout and flatIcon
 
