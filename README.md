@@ -1,4 +1,6 @@
 
+![Logo]()
+
 # TravLo
 
 ***An e-commerce web app that gets all the stuff available to trekkers and travellers at one stop.***
