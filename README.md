@@ -41,7 +41,7 @@ $ npm start
 
 - View the products available
 - Sort them according to price
-- Filter them by category, price range, star rating, mount type, and many more.
+- Filter them by category, price range, star rating, and many more.
 - Clear filters
 - Add/Remove to/from wishlist
 - Add to cart
