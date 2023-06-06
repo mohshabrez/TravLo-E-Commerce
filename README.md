@@ -79,3 +79,12 @@ $ npm start
 - React Context API + useReducer
 - React Router v6
 - Pure CSS
+
+
+## Loom Video of The Website -
+
+
+https://github.com/mohshabrez/TravLo-E-Commerce/assets/31725739/438bdaea-6c56-44d9-a7e2-1fd3fe571363
+
+
+
