@@ -79,6 +79,7 @@ $ npm start
 - React Context API + useReducer
 - React Router v6
 - Pure CSS
+- Razorpay payment gateway
 
 
 ## Loom Video of The Website -
