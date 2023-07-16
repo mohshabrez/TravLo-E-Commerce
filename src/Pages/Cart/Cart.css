@@ -205,7 +205,9 @@
     list-style-type: none;
   }
   
-  
+  .itemsList li{
+   padding: 4px;
+  }
   .placeOrder{
     padding: 10px;
     width: 150px;
@@ -245,6 +247,35 @@
   .emptyCartTitle{
     width: 150%;
     font-size: 500%;
+  }
+
+  .orderContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 20px;
+    margin-top: 150px;
+  }
+
+  .orderContainer h1{
+    text-align: center;
+    align-items: center;
+    margin-top: -140px;
+    margin-left: 60%;
+    text-decoration: underline;
+  }
+
+  .orderSummary{
+    margin-top: 170px;
+  }
+
+  .orderItems{
+    width: 30%;
+    margin-top: -180px;
+    padding: 30px;
   }
 
 

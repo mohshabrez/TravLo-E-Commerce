@@ -1,11 +1,18 @@
 import "./Cart.css"
-import { UseCommerce } from "../../Context/CommerceContext";
+import { UseCommerce, UseDispatch } from "../../Context/CommerceContext";
 import { ProductNavBar } from "../Product/ProductNavBar";
 import { useState } from "react";
 import {UpdateAddress} from "./UpdateAddress"
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { ACTIONS } from "../../Reducer/CommerceReducer";
+import { useNavigate } from "react-router-dom";
+
 
 export function CheckBox(){
     const {state} = UseCommerce();
+    const navigate = useNavigate()
+    const {dispatch} = UseDispatch()
     const [address, setAddress] = useState([])
     const [form, setForm] = useState(false)
     const[edit, setEdit] = useState(null)
@@ -74,6 +81,13 @@ export function CheckBox(){
       setEdit(null);
     }
   };
+  const removeFromCart = (cart) => {
+    dispatch({
+        type:ACTIONS.REMOVEFROMCART,
+        payLoad: cart
+    })
+}
+  
 
   const radioButtons = list.map((address) => (
     <div className="selectAddress">
@@ -93,6 +107,73 @@ export function CheckBox(){
 
     var TotalPrice =state.cartItems.reduce((acc, curr) => (curr.price*curr.qty) + acc, 0)
     var DiscountPrice = state.cartItems.reduce((acc, curr) => ((curr.originalPrice - curr.price)*curr.qty) + acc, 0)
+
+    const loadScript = async (url) => {
+      return new Promise((resolve) => {
+        const script = document.createElement('script');
+        script.src = url;
+  
+        script.onload = () => {
+          resolve(true);
+        };
+  
+        script.onerror = () => {
+          resolve(false);
+        };
+        document.body.appendChild(script);
+      });
+    };
+  
+    const displayRazorpay = async () => {
+      const res = await loadScript(
+        'https://checkout.razorpay.com/v1/checkout.js'
+      );
+  
+      if (!res) {
+        toast.info('Razorpay SDK failed to load, check you connection')
+        return;
+      }
+  
+      const options = {
+        key: 'rzp_test_1qsCb1crO36IZU',
+        amount: (TotalPrice * 100).toFixed(2),
+        currency: 'INR',
+        name: 'TravLo',
+        description: 'Thank you for shopping with us',
+        image:
+          'https://images.bewakoof.com/t540/travel-freak-full-sleeve-t-shirt-men-s-printed-full-sleeve-t-shirt-213580-1553258091.jpg',
+        handler: function (response) {
+          dispatch({
+            type: ACTIONS.PLACEORDER,
+            payload: {
+              items: state.cartItems,
+              id: response.razorpay_payment_id,
+              totalPrice: TotalPrice,
+            },
+          });
+          state.cartItems.forEach((item) => removeFromCart(item._id));
+          toast.success("Order Placed successfully")
+          navigate('/OrderSummary')
+        },
+        prefill: {
+          name: address.name,
+          email: address.email,
+          contact: address.phno,
+        },
+        theme: {
+          color: '#2B51E1',
+        },
+      };
+      const paymentObject = new window.Razorpay(options);
+      paymentObject.open();
+    };
+    const orderHandler = () => {
+      if (address.length < 1) {
+        toast.error("Please select the Address");
+        return;
+      } 
+        displayRazorpay();
+    };
 
     return(
         <>
@@ -176,7 +257,7 @@ export function CheckBox(){
                     </ul>
                     <ul>
                         <li>{TotalPrice}</li>
-                        <li>{DiscountPrice}</li>
+                        <li style={{textDecoration:"line-through"}}>{DiscountPrice}</li>
                         <li>FREE</li>
                         <li>{TotalPrice}</li>
                     </ul>
@@ -193,7 +274,7 @@ export function CheckBox(){
                     <span>{address.phno}</span>
                     </div>)}
                 </div>
-                <button className="placeOrder">Place the order</button>
+                <button className="placeOrder" onClick={orderHandler}>Place the order</button>
             </div>
             </div>
 

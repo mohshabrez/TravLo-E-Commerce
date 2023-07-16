@@ -32,11 +32,22 @@ export const ACTIONS = {
     BESTCATEGORY:"bestCategory",
     RATINGFOUR: "ratingfour",
     RATINGTHREETOFOUR:"ratingthreetofour",
-    RATINGLESSTHREE:"ratinglessthree"
+    RATINGLESSTHREE:"ratinglessthree",
+    PLACEORDER:"placeOrder"
 }
 
 export function commerceReducer(state, action){
     switch(action.type){
+        case ACTIONS.PLACEORDER:{
+            return {
+                ...state,
+                OrderSummary: {
+                  items: action.payload.items,
+                  id: action.payload.id,
+                  totalPrice: action.payload.totalPrice,
+                },
+              };
+        }
         case ACTIONS.ADDTOCART:{
             return {...state, cartItems:action.payLoad}
         }

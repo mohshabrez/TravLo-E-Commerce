@@ -11,6 +11,7 @@ import { LoginPage } from "./Pages/Login/LoginPage";
 import { RequiresAuth } from "./Components/RequiresAuth";
 import { SignUp } from "./Pages/SignUp/SignUp";
 import { CheckBox } from "./Pages/Cart/CheckBox";
+import { OrderSummary } from "./Pages/Cart/orderSummary";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="login" element={<LoginPage/>}/>
           <Route path="SignUp" element={<SignUp/>}/>
           <Route path="checkbox" element={<CheckBox/>}/>  
+          <Route path="OrderSummary" element={<OrderSummary/>}/>
       </Routes>
       <ToastContainer position='top-center'
         autoClose={5000}

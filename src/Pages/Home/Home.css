@@ -211,11 +211,11 @@
 
   @media screen and (min-width: 1280px) {
     .prev{
-      left: -520px;
+      left: -460px;
     }
     
     .next{
-      left: 685px;
+      left: 595px;
      
     }
     

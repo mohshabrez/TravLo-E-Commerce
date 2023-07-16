@@ -4,6 +4,7 @@ import linkedin from "../../Images/linkedin.png"
 import insta from "../../Images/insta.png"
 import whtsapp from "../../Images/whtsapp.png"
 import twitter from "../../Images/twitter.png"
+import { Link } from "react-router-dom"
 export function Footer(){
     return(
         <>
@@ -12,6 +13,7 @@ export function Footer(){
             <p>Shop easily Trekkers and Travel Freaks</p>
             <p>Privacy Policy</p>
             <p>Terms of Use</p>
+            <p>Designed by <a href="https://shabrezs-port.netlify.app/" target="_blank" rel="noreferrer">Shabrez</a></p>
             <p>© 2023 TrAvLo.Co</p>
         </div>
          <div className="socialLinks">
